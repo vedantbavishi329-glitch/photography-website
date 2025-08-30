@@ -1,0 +1,338 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Luxurious Cinematic Photography Portfolio - Dark Theme
+All colors MUST be HSL for seamless theming.
+*/
+
+@layer base {
+  :root {
+    /* Cinematic Dark Base */
+    --background: 215 25% 4%;
+    --foreground: 210 25% 96%;
+
+    --card: 215 20% 6%;
+    --card-foreground: 210 25% 96%;
+
+    --popover: 215 20% 6%;
+    --popover-foreground: 210 25% 96%;
+
+    /* Luxurious Golden Accent */
+    --primary: 42 96% 75%;
+    --primary-foreground: 215 25% 4%;
+    --primary-glow: 42 100% 85%;
+
+    /* Premium Deep Blues */
+    --secondary: 215 30% 8%;
+    --secondary-foreground: 210 25% 94%;
+
+    --muted: 215 25% 7%;
+    --muted-foreground: 210 20% 70%;
+
+    /* Warm Cinematic Glow */
+    --accent: 42 92% 70%;
+    --accent-foreground: 215 25% 4%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 215 25% 12%;
+    --input: 215 25% 8%;
+    --ring: 42 96% 75%;
+
+    --radius: 1rem;
+
+    /* Cinematic Gradients */
+    --gradient-luxury: radial-gradient(ellipse at center, hsl(42 96% 75% / 0.4) 0%, hsl(42 92% 70% / 0.2) 40%, transparent 80%);
+    --gradient-beam: conic-gradient(from 0deg at 50% 50%, hsl(42 96% 75% / 0.8) 0deg, hsl(42 92% 70% / 0.6) 60deg, transparent 120deg, transparent 240deg, hsl(42 96% 75% / 0.8) 300deg, hsl(42 96% 75% / 0.8) 360deg);
+    --gradient-hero: linear-gradient(135deg, hsl(215 25% 4%) 0%, hsl(215 20% 6%) 30%, hsl(215 25% 4%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(215 20% 6% / 0.8) 0%, hsl(215 25% 8% / 0.6) 100%);
+    --gradient-mesh: radial-gradient(circle at 20% 20%, hsl(42 96% 75% / 0.1) 0%, transparent 50%), 
+                     radial-gradient(circle at 80% 80%, hsl(260 30% 15% / 0.1) 0%, transparent 50%),
+                     radial-gradient(circle at 40% 40%, hsl(42 92% 70% / 0.05) 0%, transparent 50%);
+    
+    /* Cinematic Shadow Effects */
+    --shadow-luxury: 0 0 60px hsl(42 96% 75% / 0.4), 0 0 100px hsl(42 92% 70% / 0.2);
+    --shadow-deep: 0 25px 50px -12px hsl(215 25% 2% / 0.9);
+    --shadow-card: 0 8px 32px hsl(215 25% 2% / 0.6), inset 0 1px 0 hsl(42 96% 75% / 0.1);
+    --shadow-hover: 0 20px 40px hsl(215 25% 2% / 0.8), 0 0 80px hsl(42 96% 75% / 0.3);
+    
+    /* Blur Effects */
+    --blur-luxury: blur(40px);
+    --blur-subtle: blur(8px);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  /* Dark mode inherits the same dark theme */
+  .dark {
+    --background: 220 15% 8%;
+    --foreground: 210 20% 92%;
+    --card: 220 15% 10%;
+    --card-foreground: 210 20% 92%;
+    --popover: 220 15% 10%;
+    --popover-foreground: 210 20% 92%;
+    --primary: 45 90% 65%;
+    --primary-foreground: 220 15% 8%;
+    --secondary: 220 25% 15%;
+    --secondary-foreground: 210 20% 88%;
+    --muted: 220 20% 12%;
+    --muted-foreground: 210 15% 65%;
+    --accent: 45 85% 60%;
+    --accent-foreground: 220 15% 8%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 220 20% 20%;
+    --input: 220 20% 15%;
+    --ring: 45 90% 65%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    background: var(--gradient-dark);
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  /* Cinematic Effects */
+  .luxury-beam {
+    background: var(--gradient-beam);
+    animation: luxury-rotate 12s linear infinite;
+    filter: var(--blur-subtle);
+  }
+  
+  .luxury-glow {
+    background: var(--gradient-luxury);
+    box-shadow: var(--shadow-luxury);
+  }
+  
+  .mesh-background {
+    background: var(--gradient-mesh);
+    position: relative;
+  }
+  
+  /* Parallax Container */
+  .parallax-container {
+    position: relative;
+    overflow: hidden;
+    perspective: 1000px;
+  }
+  
+  .parallax-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  
+  /* Cinematic Cards */
+  .luxury-card {
+    background: var(--gradient-card);
+    backdrop-filter: blur(20px);
+    border: 1px solid hsl(42 96% 75% / 0.1);
+    box-shadow: var(--shadow-card);
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .luxury-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: var(--shadow-hover);
+    border-color: hsl(42 96% 75% / 0.3);
+  }
+  
+  /* Interactive Gallery */
+  .gallery-item {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .gallery-item:hover {
+    transform: rotateY(-10deg) rotateX(5deg) translateZ(20px);
+  }
+  
+  .gallery-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, hsl(42 96% 75% / 0) 0%, hsl(42 96% 75% / 0.3) 100%);
+    opacity: 0;
+    transition: opacity 0.6s ease;
+  }
+  
+  .gallery-item:hover .gallery-overlay {
+    opacity: 1;
+  }
+  
+  /* Flip Animation */
+  .flip-card {
+    transform-style: preserve-3d;
+    transition: transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .flip-card.flipped {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-face {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .flip-back {
+    transform: rotateY(180deg);
+  }
+  
+  /* Particles */
+  .particle {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: hsl(42 96% 75% / 0.6);
+    border-radius: 50%;
+    animation: float-particle 8s linear infinite;
+  }
+  
+  /* Cinematic Text */
+  .cinematic-title {
+    font-weight: 200;
+    letter-spacing: 0.05em;
+    background: linear-gradient(135deg, hsl(42 96% 75%) 0%, hsl(42 92% 70%) 50%, hsl(42 96% 75%) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 40px hsl(42 96% 75% / 0.5);
+  }
+  
+  /* Smooth Reveal */
+  .reveal-up {
+    transform: translateY(60px);
+    opacity: 0;
+    transition: all 1.2s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .reveal-up.revealed {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@layer utilities {
+  .text-luxury {
+    text-shadow: 0 0 30px hsl(42 96% 75% / 0.6), 0 0 60px hsl(42 92% 70% / 0.3);
+  }
+  
+  .border-luxury {
+    border-color: hsl(42 96% 75% / 0.4);
+    box-shadow: 0 0 30px hsl(42 96% 75% / 0.3);
+  }
+  
+  .backdrop-luxury {
+    backdrop-filter: blur(20px) saturate(180%);
+  }
+  
+  .scroll-smooth {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Cinematic Keyframes */
+@keyframes luxury-rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes float-particle {
+  0% { 
+    transform: translateY(100vh) translateX(0px) scale(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+    scale: 1;
+  }
+  90% {
+    opacity: 1;
+    scale: 1;
+  }
+  100% { 
+    transform: translateY(-100px) translateX(100px) scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes parallax-float {
+  0%, 100% { transform: translateY(0px) translateX(0px); }
+  33% { transform: translateY(-20px) translateX(10px); }
+  66% { transform: translateY(10px) translateX(-5px); }
+}
+
+@keyframes luxury-pulse {
+  0%, 100% { 
+    box-shadow: 0 0 20px hsl(42 96% 75% / 0.4);
+    transform: scale(1);
+  }
+  50% { 
+    box-shadow: 0 0 40px hsl(42 96% 75% / 0.8);
+    transform: scale(1.05);
+  }
+}
+
+@keyframes cinematic-fade {
+  0% { 
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+    filter: blur(10px);
+  }
+  100% { 
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0px);
+  }
+}
+
+@keyframes image-reveal {
+  0% {
+    clip-path: inset(100% 0 0 0);
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+  }
+}
