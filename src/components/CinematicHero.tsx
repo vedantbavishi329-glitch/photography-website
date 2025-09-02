@@ -52,7 +52,7 @@ const CinematicHero = () => {
 
       {/* Dynamic Light Beam */}
       <motion.div 
-        className="absolute top-1/2 left-1/2 origin-left luxury-beam opacity-70 pointer-events-none"
+        className="absolute top-[30%] left-1/2 origin-[left_4mm] luxury-beam opacity-70 pointer-events-none"
         style={{
           width: '800px',
           height: '12px',
@@ -129,15 +129,20 @@ const CinematicHero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 1 }}
           >
-            <Button 
-              size="lg" 
-              className="luxury-card hover:luxury-pulse bg-primary hover:bg-primary/90 text-primary-foreground font-medium px-12 py-6 text-lg rounded-full group"
+            {/* View Gallery → outlined + scroll */}
+            <Button
+              variant="outline"
+              size="lg"
+              onClick={() => document.getElementById("gallery")?.scrollIntoView({ behavior: "smooth" })}
+              className="luxury-card border-luxury font-medium px-12 py-6 text-lg rounded-full group"
             >
               <Camera className="mr-3 h-5 w-5 group-hover:rotate-6 transition-transform" />
               View Gallery
             </Button>
-            <Button 
-              variant="outline" 
+
+            {/* Watch Reel → outlined */}
+            <Button
+              variant="outline"
               size="lg"
               className="luxury-card border-luxury font-medium px-12 py-6 text-lg rounded-full group"
             >
@@ -148,7 +153,7 @@ const CinematicHero = () => {
         </motion.div>
 
         {/* Scroll Indicator */}
-        <motion.div 
+        <motion.div
           className="absolute bottom-12 left-1/2 transform -translate-x-1/2"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
