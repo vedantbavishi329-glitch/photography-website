@@ -36,9 +36,7 @@ const Navigation = () => {
                 {item.name}
               </NavLink>
             ))}
-            <Button variant="outline" className="border-glow">
-              Contact
-            </Button>
+
           </div>
 
           {/* Mobile menu button */}

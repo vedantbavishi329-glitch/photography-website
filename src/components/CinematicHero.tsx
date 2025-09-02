@@ -103,7 +103,8 @@ const CinematicHero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.5, delay: 0.3, ease: [0.23, 1, 0.32, 1] }}
           >
-            Lightkeeper
+            Cinematic
+
           </motion.h1>
 
           <motion.div
@@ -119,8 +120,7 @@ const CinematicHero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, delay: 0.6 }}
           >
-            Where light becomes poetry. Capturing the essence of moments through
-            cinematic photography that tells your unique story.
+            I don't just take pictures; I craft cinematic experiences. My work is a blend of breathtaking visuals and deep emotion, designed to leave a lasting impression. Explore the difference in my gallery.
           </motion.p>
 
           <motion.div
