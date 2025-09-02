@@ -28,47 +28,20 @@ const InteractiveGallery = () => {
   const observerRef = useRef<IntersectionObserver>();
 
   const galleryItems: GalleryItem[] = [
+
     {
       id: 1,
-      category: 'Concert',
-      title: 'Golden Hour Sessions',
-      description: 'Natural light portrait photography',
-      location: 'Coastal Cliffs, California',
-      date: 'October 2024',
-      camera: 'Canon EOS R5',
-      settings: 'f/2.8 • 1/250s • ISO 100',
+      category: 'Landscape',
+      title: 'Brand Photography',
+      description: 'Professional business portraits',
+      location: 'Downtown Studio',
+      date: 'July 2024',
+      camera: 'Fujifilm GFX 100S',
+      settings: 'f/4 • 1/125s • ISO 160',
       aspectRatio: 'aspect-rectangle',
-      story: 'Captured during the magical golden hour when the coastal light painted everything in warm hues. The subject\'s natural expression tells a story of contemplation and serenity.',
-      image: 'https://ik.imagekit.io/mid2fiwk2/IMG_0185%202.jpg?updatedAt=1756461565028',
+      story: 'Corporate photography that captures the essence of modern business leaders. Clean, professional lighting that emphasizes confidence and approachability.',
+      image: 'https://ik.imagekit.io/mid2fiwk2/IMG_9899.jpg?updatedAt=1756850921665',
       isPortrait: false,
-    },
-    {
-      id: 2,
-      category: 'Concert',
-      title: 'Coastal Sunrises',
-      description: 'Early morning lighthouse views',
-      location: 'Maine Lighthouse',
-      date: 'September 2024',
-      camera: 'Sony A7R IV',
-      settings: 'f/11 • 1/60s • ISO 200',
-      aspectRatio: 'aspect-rectangle',
-      story: 'At 5 AM, I witnessed this breathtaking sunrise illuminate the historic lighthouse. The interplay of light and shadow creates a cinematic moment frozen in time.',
-      image: 'https://ik.imagekit.io/mid2fiwk2/IMG_0047.JPG?updatedAt=1756461564940',
-      isPortrait: false,
-    },
-    {
-      id: 3,
-      category: 'Concert',
-      title: 'Intimate Ceremonies',
-      description: 'Love stories in natural light',
-      location: 'Napa Valley Vineyard',
-      date: 'August 2024',
-      camera: 'Canon EOS R6',
-      settings: 'f/1.8 • 1/320s • ISO 400',
-      aspectRatio: 'aspect-rectangle',
-      story: 'This couple chose an intimate vineyard setting for their vows. The natural light filtering through the grape leaves created the perfect romantic atmosphere.',
-      image: 'https://ik.imagekit.io/mid2fiwk2/IMG_0181%202.jpg?updatedAt=1756461564945',
-      isPortrait: true,
     },
     {
       id: 4,
@@ -126,23 +99,9 @@ const InteractiveGallery = () => {
       image: 'https://ik.imagekit.io/mid2fiwk2/IMG_1790.JPG?updatedAt=1756455837955',
       isPortrait: true,
     },
-      {
-      id: 8,
-      category: 'Animals',
-      title: 'Urban Stories',
-      description: 'Life in the city streets',
-      location: 'San Francisco',
-      date: 'June 2024',
-      camera: 'Leica Q2',
-      settings: 'f/5.6 • 1/500s • ISO 800',
-      aspectRatio: 'aspect-rectangle',
-      story: 'Street photography captures the authentic moments of urban life. This shot represents the hustle and beauty of city living in its purest form.',
-      image: 'https://ik.imagekit.io/mid2fiwk2/DSC_2483-2.jpg?updatedAt=1756455838302',
-      isPortrait: false,
-    },
   ];
 
-  const categories = ['All', 'Portraits', 'Landscape', 'Animals', 'Concerts'];
+  const categories = ['All', 'Portraits', 'Landscape', 'Animals'];
 
   const filteredItems = selectedCategory === 'All'
     ? galleryItems
