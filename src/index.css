@@ -197,16 +197,16 @@ All colors MUST be HSL for seamless theming.
     opacity: 1;
   }
   
-  /* Flip Animation */
+ /* Flip Animation */
   .flip-card {
     transform-style: preserve-3d;
     transition: transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
   }
-  
+
   .flip-card.flipped {
     transform: rotateY(180deg);
   }
-  
+
   .flip-face {
     backface-visibility: hidden;
     position: absolute;
@@ -215,9 +215,10 @@ All colors MUST be HSL for seamless theming.
     width: 100%;
     height: 100%;
   }
-  
+
   .flip-back {
     transform: rotateY(180deg);
+    pointer-events: none; /* Add this line */
   }
   
   /* Particles */
