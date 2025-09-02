@@ -35,7 +35,7 @@ const CinematicHero = () => {
   return (
     <div ref={heroRef} className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Parallax Background */}
-      <motion.div 
+      <motion.div
         style={{ y, scale }}
         className="absolute inset-0 parallax-layer"
       >
@@ -51,10 +51,10 @@ const CinematicHero = () => {
       <div className="absolute inset-0 mesh-background opacity-30" />
 
       {/* Dynamic Light Beam */}
-      <motion.div 
+      <motion.div
         className="absolute top-[30%] left-1/2 origin-[left_4mm] luxury-beam opacity-70 pointer-events-none"
         style={{
-          width: '800px',
+          width: '900px',
           height: '12px',
           transform: `translate(-50%, -50%) rotate(${calculateRotation()}deg)`,
           filter: 'blur(2px)',
@@ -70,7 +70,7 @@ const CinematicHero = () => {
       />
 
       {/* Cursor Glow Effect */}
-      <motion.div 
+      <motion.div
         className="absolute w-12 h-12 pointer-events-none z-50 luxury-glow"
         style={{
           left: mousePosition.x - 24,
@@ -88,7 +88,7 @@ const CinematicHero = () => {
       />
 
       {/* Content */}
-      <motion.div 
+      <motion.div
         style={{ opacity }}
         className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto"
       >
@@ -97,7 +97,7 @@ const CinematicHero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, ease: [0.23, 1, 0.32, 1] }}
         >
-          <motion.h1 
+          <motion.h1
             className="text-6xl md:text-8xl lg:text-9xl font-extralight mb-8 cinematic-title leading-none"
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
@@ -105,25 +105,25 @@ const CinematicHero = () => {
           >
             Lightkeeper
           </motion.h1>
-          
-          <motion.div 
+
+          <motion.div
             className="w-32 h-[2px] bg-primary mx-auto mb-12 luxury-glow"
             initial={{ width: 0 }}
             animate={{ width: 128 }}
             transition={{ duration: 1, delay: 0.8 }}
           />
-          
-          <motion.p 
+
+          <motion.p
             className="text-xl md:text-3xl text-muted-foreground mb-16 max-w-3xl mx-auto leading-relaxed font-light"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, delay: 0.6 }}
           >
-            Where light becomes poetry. Capturing the essence of moments through 
+            Where light becomes poetry. Capturing the essence of moments through
             cinematic photography that tells your unique story.
           </motion.p>
-          
-          <motion.div 
+
+          <motion.div
             className="flex flex-col sm:flex-row gap-6 justify-center items-center"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}

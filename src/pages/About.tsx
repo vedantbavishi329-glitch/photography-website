@@ -65,7 +65,7 @@ const About = () => {
             </h1>
             <div className="w-32 h-[2px] bg-primary mx-auto mb-12 luxury-glow" />
             <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto font-light leading-relaxed">
-              Every photograph is a portal to emotion, a frozen moment where light becomes poetry and stories unfold in silence.
+              Someone captures a moment when they want to hold it for long but after all it fades away with time
             </p>
           </motion.div>
 
