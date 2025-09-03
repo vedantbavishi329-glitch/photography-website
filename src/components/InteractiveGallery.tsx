@@ -205,14 +205,15 @@ const InteractiveGallery = () => {
     },
       {
       id: 16,
-      category: 'Portraits',
-      title: '',
-      description: 'Legendary football legacy',
-      location: 'Dubai, UAE\n',
-      date: 'December 2024',
+      category: ' Landscape',
+      title: 'Cascading Serenity',
+      description: 'Ethereal waterfall beauty',
+      location: 'Kangra, Darini\n',
+      date: 'May 2024',
       aspectRatio: 'aspect-rectangle',
-      story: 'A tribute to greatness, these framed jerseys stand as silent witnesses to historic victories. Each shirt represents a chapter in a legendary football club\'s story, immortalized in a moment of reverence.\n',
-      image: 'https://ik.imagekit.io/mid2fiwk2/File%20-%202025-08-27T20_11_54.png?updatedAt=1756901391381',
+      story: 'A powerful waterfall plunges into a clear pool, creating a serene and majestic scene. The long exposure technique transforms the rushing water into a silky, ethereal veil, highlighting the raw beauty of the verdant cliffs and the vibrant life that surrounds it.\n' +
+          '\n',
+      image: 'https://ik.imagekit.io/mid2fiwk2/IMG_3411.jpeg?updatedAt=1756906032390',
       isPortrait: false,
     },
   ];
