@@ -71,9 +71,7 @@ const Navigation = () => {
                 </NavLink>
               ))}
               <div className="px-3 py-2">
-                <Button variant="outline" className="w-full border-glow">
-                  Contact
-                </Button>
+
               </div>
             </div>
           </div>

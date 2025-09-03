@@ -253,7 +253,7 @@ const InteractiveGallery = () => {
   };
 
   return (
-    <div className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden bg-background">
+    <div id="gallery" className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden bg-background">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-secondary/5" />
 
