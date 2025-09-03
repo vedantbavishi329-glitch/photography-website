@@ -80,7 +80,8 @@ const About = () => {
             </h1>
             <div className="w-32 h-[2px] bg-gradient-to-r from-transparent via-primary to-transparent mx-auto mb-12 luxury-glow" />
             <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto font-light leading-relaxed">
-              Someone captures a moment when they want to hold it for long but after all it fades away with time
+              From shutter clicks to code scripts every frame tells a story
+
             </p>
           </motion.div>
 
@@ -119,22 +120,25 @@ const About = () => {
                 <h2 className="text-3xl font-light mb-8 cinematic-title text-white">My Journey</h2>
                 <div className="space-y-6 text-gray-300 leading-relaxed font-light text-lg">
                   <p>
-                    Like a lighthouse cuts through darkness to guide ships safely home, I believe
-                    photography illuminates the extraordinary within the ordinary. My journey began
-                    fifteen years ago with a vintage film camera and an endless fascination with
-                    how light sculpts our world.
+                    Hello wandering visitor, I am Vedant. A self-appointed shutterbug who captures the moments of the world before
+                    they fade out of sight or mind.
+
                   </p>
                   <p>
-                    From the ethereal glow of dawn breaking over coastal cliffs to the intimate
-                    warmth of candlelit celebrations, I specialize in capturing light as both
-                    subject and storyteller. Each frame is crafted with cinematic precision,
-                    creating visual narratives that resonate long after the moment has passed.
+                    But I am not just someone behind a camera. I am a tech enthusiast who enjoys exploring computer science,
+                    experimenting with new tools, and building projects that connect innovation with purpose.
+                    I like taking ideas from imagination to execution, whether it’s coding a solution, designing a project,
+                    or finding smarter ways to use technology.
+
+
                   </p>
                   <p>
-                    Based along the dramatic coastlines where historic lighthouses have guided
-                    travelers for centuries, I draw deep inspiration from the eternal dance
-                    between natural light and human emotion.
+                    Away from the screen, the football field is my second home. Playing as a goalkeeper has taught me discipline
+                    , focus, and resilience—qualities that shape how I approach challenges in life too.
+
                   </p>
+                  <p>At heart, I am curious, creative, and constantly learning, trying to hold on to the moments, skills,
+                    and experiences that shape who I am before they fade away</p>
                 </div>
               </Card>
             </motion.div>
@@ -155,8 +159,7 @@ const About = () => {
                   <div className="flex items-center space-x-4 text-gray-300">
                     <MapPin className="h-6 w-6 text-primary" />
                     <div>
-                      <p className="font-medium text-white">Pacific Coast, USA</p>
-                      <p className="text-sm">Available worldwide for projects</p>
+                      <p className="font-medium text-white">Ahmedabad, India</p>
                     </div>
                   </div>
                   <div className="flex items-center space-x-4 text-gray-300">
