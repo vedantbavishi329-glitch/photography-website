@@ -120,7 +120,7 @@ const CinematicHero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, delay: 0.6 }}
           >
-            I don't just take pictures; I craft cinematic experiences. My work is a blend of breathtaking visuals and deep emotion, designed to leave a lasting impression. Explore the difference in my gallery.
+            From shutter clicks to code scripts every frame tells a story
           </motion.p>
 
           <motion.div

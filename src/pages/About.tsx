@@ -3,7 +3,7 @@ import Navigation from '@/components/Navigation';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Camera, MapPin, Mail, Instagram, Linkedin, Sparkles, Palette, Lightbulb } from 'lucide-react';
+import { Camera, MapPin, Mail, Instagram, Linkedin, Sparkles, Palette, Lightbulb,Phone } from 'lucide-react';
 
 const About = () => {
   const { scrollYProgress } = useScroll();
@@ -12,12 +12,12 @@ const About = () => {
   const skills = [
     'Cinematic Portrait Photography',
     'Fine Art Landscapes',
-    'Luxury Wedding Photography',
-    'Commercial & Editorial',
+    'Tech & Coding Projects',
+    'Digital Innovation',
     'Street Photography',
-    'Advanced Digital Artistry',
+    'Football & Team Discipline',
     'Color Grading & Retouching',
-    'Creative Direction'
+    'Continuous Learning & Exploration'
   ];
 
 
@@ -76,7 +76,7 @@ const About = () => {
               <Sparkles className="h-12 w-12 text-primary luxury-pulse" />
             </div>
             <h1 className="text-5xl md:text-7xl font-extralight mb-8 cinematic-title text-white">
-              About the <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary/70">Lightkeeper</span>
+              About <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary/70">Vedant</span>
             </h1>
             <div className="w-32 h-[2px] bg-gradient-to-r from-transparent via-primary to-transparent mx-auto mb-12 luxury-glow" />
             <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto font-light leading-relaxed">
@@ -89,26 +89,26 @@ const About = () => {
           <div className="grid lg:grid-cols-2 gap-16 mb-24 items-center">
             {/* Profile Image */}
             <motion.div
-              className="relative"
-              initial={{ opacity: 0, x: -60 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1.2, delay: 0.3 }}
-            >
-              <div className="luxury-card p-8 text-center bg-gray-900 border-gray-800">
-                <div className="w-80 h-80 mx-auto mb-8 relative">
-                  <div className="absolute inset-0 luxury-glow rounded-full bg-primary/20" />
-                  <div className="relative w-full h-full bg-gradient-to-br from-gray-800 to-gray-900 rounded-full flex items-center justify-center border border-gray-700">
-                    <div className="relative">
-                      <Camera className="h-32 w-32 text-primary/40" />
-                      <Lightbulb className="h-8 w-8 text-primary absolute -top-2 -right-2 luxury-pulse" />
-                    </div>
-                  </div>
-                </div>
-                <h3 className="text-2xl font-light mb-2 cinematic-title text-white">The Artist</h3>
-                <p className="text-gray-400">Lightkeeper & Visual Storyteller</p>
-              </div>
-            </motion.div>
-
+ className="relative"
+ initial={{ opacity: 0, x: -60 }}
+ animate={{ opacity: 1, x: 0 }}
+ transition={{ duration: 1.2, delay: 0.3 }}
+>
+ <div className="luxury-card p-8 text-center bg-gray-900 border-gray-800">
+   <div className="w-80 h-80 mx-auto mb-8 mt-4 relative">
+     <div className="absolute inset-0 luxury-glow rounded-full bg-primary/20" />
+     <div className="relative w-full h-full rounded-full overflow-hidden border border-gray-700">
+       <img
+         src="https://ik.imagekit.io/mid2fiwk2/pic.jpg?updatedAt=1756909817059"
+         alt="Profile"
+         className="w-full h-full object-cover"
+       />
+     </div>
+   </div>
+   <h3 className="text-2xl font-light mb-2 cinematic-title text-white">The Artist</h3>
+   <p className="text-gray-400">Photographer & Visual Storyteller</p>
+ </div>
+</motion.div>
             {/* Story */}
             <motion.div
               className="space-y-8"
@@ -163,27 +163,33 @@ const About = () => {
                     </div>
                   </div>
                   <div className="flex items-center space-x-4 text-gray-300">
-                    <Camera className="h-6 w-6 text-primary" />
+                    <Phone className="h-6 w-6 text-primary" />
                     <div>
-                      <p className="font-medium text-white">Professional Services</p>
-                      <p className="text-sm">Portraits, weddings, commercial & fine art</p>
+                      <p className="font-medium text-white">Contact</p>
+                      <p className="text-sm">+916352489143</p>
                     </div>
                   </div>
                 </div>
 
                 <div className="flex space-x-4 mt-8">
-                  <Button variant="outline" size="sm" className="luxury-card bg-gray-800 border-gray-700 text-gray-200 hover:bg-gray-700">
-                    <Mail className="h-4 w-4 mr-2" />
-                    Email
-                  </Button>
-                  <Button variant="outline" size="sm" className="luxury-card bg-gray-800 border-gray-700 text-gray-200 hover:bg-gray-700">
-                    <Instagram className="h-4 w-4 mr-2" />
-                    Instagram
-                  </Button>
-                  <Button variant="outline" size="sm" className="luxury-card bg-gray-800 border-gray-700 text-gray-200 hover:bg-gray-700">
-                    <Linkedin className="h-4 w-4 mr-2" />
-                    LinkedIn
-                  </Button>
+                  <a href="mailto:your-email@example.com">
+                    <Button variant="outline" size="sm" className="luxury-card bg-gray-800 border-gray-700 text-gray-200 hover:bg-gray-700">
+                      <Mail className="h-4 w-4 mr-2" />
+                      Email
+                    </Button>
+                  </a>
+                  <a href="https://instagram.com/_vedant_14522/" target="_blank" rel="noopener noreferrer">
+                    <Button variant="outline" size="sm" className="luxury-card bg-gray-800 border-gray-700 text-gray-200 hover:bg-gray-700">
+                      <Instagram className="h-4 w-4 mr-2" />
+                      Instagram
+                    </Button>
+                  </a>
+                  <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">
+                    <Button variant="outline" size="sm" className="luxury-card bg-gray-800 border-gray-700 text-gray-200 hover:bg-gray-700">
+                      <Linkedin className="h-4 w-4 mr-2" />
+                      LinkedIn
+                    </Button>
+                  </a>
                 </div>
               </Card>
             </motion.div>
@@ -234,7 +240,7 @@ const About = () => {
               <blockquote className="text-3xl md:text-4xl font-extralight italic text-white mb-8 leading-relaxed cinematic-title">
                 "Photography is the art of frozen time... the ability to store emotion and feelings within a frame, creating windows to moments that transcend the ordinary."
               </blockquote>
-              <cite className="text-gray-400 font-light text-lg">— Philosophy of the Lightkeeper</cite>
+              <cite className="text-gray-400 font-light text-lg"></cite>
             </Card>
           </motion.div>
         </div>
