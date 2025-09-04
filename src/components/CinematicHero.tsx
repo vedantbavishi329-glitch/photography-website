@@ -121,7 +121,7 @@ const CinematicHero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, delay: 0.6 }}
           >
-            Photographer | Lifelong Learner | Innovator
+            Photography | Lifelong Learner | Innovator
           </motion.p>
 
           <motion.div
