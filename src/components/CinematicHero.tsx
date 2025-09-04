@@ -1,7 +1,7 @@
 import { useRef, useEffect, useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { V, Play,FileText} from 'lucide-react';
+import { paw, Play,FileText} from 'lucide-react';
 import lighthouseImage from '@/assets/lighthouse-hero.jpg';
 import {Document} from "postcss";
 
@@ -137,7 +137,7 @@ const CinematicHero = () => {
               onClick={() => document.getElementById("gallery")?.scrollIntoView({ behavior: "smooth" })}
               className="luxury-card border-luxury font-medium px-12 py-6 text-lg rounded-full group"
             >
-              <V className="mr-3 h-5 w-5 group-hover:rotate-6 transition-transform" />
+              <paw className="mr-3 h-5 w-5 group-hover:rotate-6 transition-transform" />
               View Gallery
             </Button>
 
