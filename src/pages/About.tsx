@@ -179,7 +179,7 @@ const About = () => {
                 </div>
 
                 <div className="flex flex-wrap gap-4 mt-8">
-                  <a href="mailto:your-email@example.com">
+                  <a href="mailto:vedantbavishi329@gmail.com">
                     <Button variant="outline" size="sm" className="luxury-card bg-gray-800 border-gray-700 text-gray-200 hover:bg-gray-700">
                       <Mail className="h-4 w-4 mr-2" />
                       Email
