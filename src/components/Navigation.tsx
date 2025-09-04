@@ -18,7 +18,7 @@ const Navigation = () => {
           {/* Logo */}
           <NavLink to="/" className="flex items-center space-x-2 text-foreground hover:text-primary transition-colors">
             <Camera className="h-8 w-8" />
-            <span className="font-bold text-xl">v.co</span>
+            <span className="font-bold text-xl">VB</span>
           </NavLink>
 
           {/* Desktop Navigation */}
