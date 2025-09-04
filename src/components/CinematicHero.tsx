@@ -1,8 +1,9 @@
 import { useRef, useEffect, useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { Camera, Play } from 'lucide-react';
+import { Camera, Play,FileText} from 'lucide-react';
 import lighthouseImage from '@/assets/lighthouse-hero.jpg';
+import {Document} from "postcss";
 
 const CinematicHero = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -120,7 +121,7 @@ const CinematicHero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, delay: 0.6 }}
           >
-            From shutter clicks to code scripts every frame tells a story
+            Photographer | Lifelong Learner | Innovator
           </motion.p>
 
           <motion.div
@@ -145,10 +146,12 @@ const CinematicHero = () => {
               variant="outline"
               size="lg"
               className="luxury-card border-luxury font-medium px-12 py-6 text-lg rounded-full group"
+              onClick={() => window.open("https://example.com/dummy-resume.pdf", "_blank")}
             >
-              <Play className="mr-3 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              Watch Reel
+              <FileText className="mr-3 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              View Resume
             </Button>
+
           </motion.div>
         </motion.div>
 
